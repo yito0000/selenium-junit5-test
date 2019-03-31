@@ -4,5 +4,6 @@
 .idea/vcs.xml
 
 build/*
+out/*
 
 gradle/wrapper/gradle-wrapper.properties
