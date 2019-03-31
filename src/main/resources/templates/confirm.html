@@ -1,13 +1,17 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="ja" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
   <meta charset="UTF-8">
   <title>confirm</title>
 </head>
 <body>
   <div>
-    <span>text1 : ${text1}</span>
-    <span>text2 : ${text2}</span>
+    <form th:object="${appModel}" method="post" th:action="@{/complete}">
+      <span>name : </span><span th:text="*{name}"></span><br>
+      <span>age : </span><span th:text="*{age}"></span><br>
+
+      <input type="submit">
+    </form>
   </div>
 </body>
 </html>

@@ -15,7 +15,8 @@ import java.util.Map;
 public class AppController {
 
     @GetMapping(path = "/input")
-    public ModelAndView showInput(ModelAndView modelAndView) {
+    public ModelAndView showInput() {
+        ModelAndView modelAndView = new ModelAndView();
         modelAndView.setViewName("input");
         AppModel appModel = new AppModel();
         modelAndView.addObject("appModel", appModel);
@@ -30,7 +31,19 @@ public class AppController {
 
     @GetMapping(path = "/confirm")
     public ModelAndView showConfirm(@ModelAttribute("appModel") AppModel appModel) {
-        System.out.println(appModel);
-        return new ModelAndView("confirm");
+        ModelAndView modelAndView = new ModelAndView();
+        modelAndView.setViewName("confirm");
+        modelAndView.addObject("appModel", appModel);
+        return modelAndView;
+    }
+
+    @PostMapping(path = "/complete")
+    public String redirectComplete() {
+        return "redirect:complete";
+    }
+
+    @GetMapping(path = "/complete")
+    public ModelAndView showComplete() {
+        return new ModelAndView("complete");
     }
 }

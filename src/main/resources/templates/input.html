@@ -6,10 +6,11 @@
 </head>
 <body>
   <div>
-    <form th:object="${appModel}">
+    <form th:object="${appModel}" method="post" th:action="@{/confirm}">
       <input type="text" th:field="*{name}"><br>
+      <input type="text" th:field="*{age}"><br>
 
-      <input type="submit" id="btn">
+      <input type="submit">
     </form>
 
   </div>

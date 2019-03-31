@@ -6,5 +6,6 @@ import lombok.Data;
 public class AppModel {
 
     private String name;
+    private String age;
 
 }
