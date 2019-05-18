@@ -12,7 +12,13 @@ dockerを使ってselenium hub, selenium gridを用意
 docker-compose up -d
 ``` 
 
-com.example.seleniumjunit5test.controllerのtestAppメソッドでテスト実行
+com.example.seleniumjunit5test.controllerのtestAppメソッドを修正
+```$xslt
+driver.get("http://xxxxx/input");
+```
+ドメインを設定
+
+テスト実行
 
 
 
