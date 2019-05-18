@@ -1,4 +1,5 @@
 # selenium-junit5-test
+selenium gridを利用してテストを実行
 
 ### 実行環境
 * docker
@@ -7,7 +8,7 @@
 ### 実行方法
 アプリをビルド、適当なサーバへデプロイしてAPサーバを用意
 
-dockerを使ってselenium hub, selenium gridを用意
+dockerを使ってhub, nodeを用意
 ```$xslt
 docker-compose up -d
 ``` 
