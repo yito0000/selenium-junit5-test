@@ -1,14 +1,14 @@
 version: '2'
 
 services:
-  firefox:
-    image: selenium/node-firefox:3.141.59-neon
-    volumes:
-      - /dev/shm:/dev/shm
-    depends_on:
-      - hub
-    environment:
-      HUB_HOST: hub
+#  firefox:
+#    image: selenium/node-firefox:3.141.59-neon
+#    volumes:
+#      - /dev/shm:/dev/shm
+#    depends_on:
+#      - hub
+#    environment:
+#      HUB_HOST: hub
   chrome:
     image: selenium/node-chrome:3.141.59-neon
     volumes:
@@ -21,9 +21,3 @@ services:
     image: selenium/hub:3.141.59-neon
     ports:
       - "4444:4444"
-  app:
-    container_name: container_spring_app
-    build: .
-    ports:
-      - 8080:8080
-
