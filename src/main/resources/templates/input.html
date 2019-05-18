@@ -7,10 +7,10 @@
 <body>
   <div>
     <form th:object="${appModel}" method="post" th:action="@{/confirm}">
-      <input type="text" th:field="*{name}"><br>
-      <input type="text" th:field="*{age}"><br>
+      name：<input type="text" id="name" th:field="*{name}"><br>
+      age：<input type="text" id="age" th:field="*{age}"><br>
 
-      <input type="submit">
+      <input id="submit" type="submit">
     </form>
 
   </div>
